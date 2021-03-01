@@ -12,7 +12,10 @@ type Query {
     tag(slug: String! @eq): Tag @find
 
     
-    jobs: [Job!]! @all
+    jobs(
+        //orderBy: _ @orderBy(columns: ["created_at"])
+        hasTags: _ @whereHasConditions(columns: ["slug"])
+    ): [Job!]! @all
 
   
 }
