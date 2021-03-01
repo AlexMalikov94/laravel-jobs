@@ -13,7 +13,7 @@ type Query {
 
     
     jobs(
-        //orderBy: _ @orderBy(columns: ["created_at"])
+        orderBy: _ @orderBy(columns: ["created_at"])
         hasTags: _ @whereHasConditions(columns: ["slug"])
     ): [Job!]! @all
 
