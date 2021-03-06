@@ -17,7 +17,7 @@ type Query {
         hasTags: _ @whereHasConditions(columns: ["slug"])
     ): [Job!]! @all
 
-  
+    me: User @auth
 }
 
 type Tag {
