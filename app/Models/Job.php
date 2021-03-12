@@ -21,7 +21,8 @@ class Job extends Model
       'company_name',
       'company_logo',
       'highlighted',
-      'pinned'
+      'pinned',
+      'user_id'
     ];
 
     public function tags() : BelongsToMany
